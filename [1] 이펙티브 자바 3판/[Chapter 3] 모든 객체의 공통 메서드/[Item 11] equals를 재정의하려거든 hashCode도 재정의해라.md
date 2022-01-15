@@ -13,7 +13,7 @@ hashCode와 equals에 대한 Object 명세
 
 ## hashCode를 재정의하지 않을 때 생기는 문제
 
-[Item 10]()에서 보았듯이 **equals는 물리적으로 다른 두 객체를 논리적으로 같다고 할 수 있다.** 그러나 `Object`에 정의된 기본 hashCode 메서드는 물리적으로 다르나, 논리적으로는 같은 이 객체를 전혀 다르다고 판단해 다른 값을 반환한다.
+[Item 10](https://github.com/suin0730/active-reading/blob/main/%5B1%5D%20%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/%5BChapter%203%5D%20%EB%AA%A8%EB%93%A0%20%EA%B0%9D%EC%B2%B4%EC%9D%98%20%EA%B3%B5%ED%86%B5%20%EB%A9%94%EC%84%9C%EB%93%9C/%5BItem%2010%5D%20equals%EB%8A%94%20%EC%9D%BC%EB%B0%98%20%EA%B7%9C%EC%95%BD%EC%9D%84%20%EC%A7%80%EC%BC%9C%20%EC%9E%AC%EC%A0%95%EC%9D%98%ED%95%98%EB%9D%BC.md)에서 보았듯이 **equals는 물리적으로 다른 두 객체를 논리적으로 같다고 할 수 있다.** 그러나 `Object`에 정의된 기본 hashCode 메서드는 물리적으로 다르나, 논리적으로는 같은 이 객체를 전혀 다르다고 판단해 다른 값을 반환한다.
 
 이전 Item 예시인 `PhoneNumber` 클래스를 생각해보면, 이 클래스는 hashCode를 재정의하지 않았기 때문에 논리적으로 같은 객체에 다른 해시코드를 반환한다. 예를 들어, 아래 코드에서 `m.get()`은 "제니"를 반환하지 않는다.
 
